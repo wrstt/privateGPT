@@ -1,14 +1,14 @@
+version: "3.8"
 services:
+
   private-gpt:
-    build:
+  
+    build: 
+      context: . # Set build context  
       dockerfile: Dockerfile.local
-    volumes:
-      - ./local_data/:/home/worker/app/local_data
-      - ./models/:/home/worker/app/models
     ports:
-      - 8001:8080
+      - 8001:8080  
     environment:
       PORT: 8080
-      PGPT_PROFILES: docker
+      PGPT_PROFILES: docker  
       PGPT_MODE: local
-
