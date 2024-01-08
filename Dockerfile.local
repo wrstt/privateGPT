@@ -1,5 +1,5 @@
 FROM python:3.11.6-bullseye as base 
-
+#bullseye as it contains gcc
 # Install poetry
 RUN pip install pipx  
 RUN python3 -m pipx ensurepath
